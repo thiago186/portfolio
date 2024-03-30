@@ -1,0 +1,16 @@
+.profile-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Ajuste o espaçamento conforme necessário */
+  }
+  
+  .profile-text {
+    flex: 1; /* Permite que o texto ocupe o espaço disponível */
+  }
+  
+  .profile-image img {
+    max-width: 100%; /* Garante que a imagem seja responsiva */
+    height: auto;
+  }
+  

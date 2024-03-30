@@ -1,6 +1,8 @@
 import React from 'react';
 import './NotFound.css';
 
+import Navbar from '../../components/Navbar/Navbar';
+
 function NotFound() {
   return (
     <div className="not-found-container">
