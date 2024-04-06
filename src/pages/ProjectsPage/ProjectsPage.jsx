@@ -7,7 +7,7 @@ import Navbar from '../../components/Navbar/Navbar';
 
 const backendUrl = import.meta.env.VITE_BACKEND_URL;
 async function getProjects() {
-    axios.get(`${backendUrl}/projects`)
+    return axios.get(`${backendUrl}/projects`)
         .then((response) => {
             console.log(response.data);
             return response.data;
@@ -46,30 +46,15 @@ function ProjectsPage() {
                 <h1>{backendUrl}</h1>
                 <div className="projects-grid">
                     {
-                        projects.map((project) => (
+                        projects.map((project, index) => (
                             <ProjectCard
+                                key={project._id}
                                 projectName={project.name}
-                                projectImage={project.image}
-                                projectDescription={project.description}
+                                projectImage={project.image_url}
+                                projectDescription={project.project_description}
                             />
                         ))
                     }
-                    <ProjectCard
-                        projectName="Meu Projeto 1"
-                        projectImage="/logo.png"
-                        projectDescription="Descrição breve do meu projeto."
-                    />
-                    <ProjectCard
-                        projectName="Meu Projeto 2"
-                        projectImage="/logo.png"
-                        projectDescription="Descrição breve do meu projeto."
-                    />
-                    <ProjectCard
-                        projectName="Meu Projeto 3"
-                        projectImage="https://th.bing.com/th/id/OIP.Bmrr7MdclV5-eTlbq4fqGgHaE8?rs=1&pid=ImgDetMain"
-                        projectDescription="Descrição breve do meu projeto."
-                    />
-                    {/* Add more ProjectCard components here */}
                 </div>
             </div>
         </div>
