@@ -7,10 +7,11 @@ import {
 } from "react-router-dom";
 import "./index.css";
 
-import NotFound from "./pages/NotFoundPage/NotFound";
-import ProjectsPage from "./pages/ProjectsPage/ProjectsPage";
 import AboutMePage from "./pages/AboutMePage/AboutMePage";
 import Navbar from "./components/Navbar/Navbar";
+import NotFound from "./pages/NotFoundPage/NotFound";
+import ProjectsPage from "./pages/ProjectsPage/ProjectsPage";
+import SingleProjectPage from "./pages/SingleProjectPage/SingleProjectPage";
 
 
 const router = createBrowserRouter([
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
   {
     path: "/aboutMe",
     element: <AboutMePage />,
+  },
+  {
+    path: "/projects/:projectId",
+    element: <SingleProjectPage />,
   }
 ]);
 
