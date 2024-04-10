@@ -30,6 +30,7 @@ function ProjectsPage() {
                 setProjects(projectsData); 
             } catch (error) {
                 console.error("Erro ao buscar projetos:", error);
+                setProjects(false);
             }
         }
 
@@ -37,28 +38,40 @@ function ProjectsPage() {
     }, []); 
 
 
-
-    console.log('teste')
-    return (
-        <div>
-            <Navbar />
-            <div className="projects-page-container">
-                <h1>{backendUrl}</h1>
-                <div className="projects-grid">
-                    {
-                        projects.map((project, index) => (
-                            <ProjectCard
-                                key={project._id}
-                                projectName={project.name}
-                                projectImage={project.image_url}
-                                projectDescription={project.project_description}
-                            />
-                        ))
-                    }
+    if (projects != false){
+        return (
+            <div>
+                <Navbar />
+                <div className="projects-page-container">
+                    <h1>{backendUrl}</h1>
+                    <div className="projects-grid">
+                        {
+                            projects.map((project, index) => (
+                                <ProjectCard
+                                    key={project._id}
+                                    projectName={project.name}
+                                    projectImage={project.image_url}
+                                    projectDescription={project.project_description}
+                                />
+                            ))
+                        }
+                    </div>
                 </div>
             </div>
-        </div>
-    );
+        );
+    } else {
+        return (
+            <div>
+                <Navbar />
+                <div className="projects-page-container">
+                    <h1>Error</h1>
+                    <p>Desculpe, houve um erro ao recuperar os projetos. Volte novamente mais tarde.</p>
+                </div>
+            </div>
+        )
+    }
+
+
 }
 
 export default ProjectsPage;
