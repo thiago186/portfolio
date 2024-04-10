@@ -49,6 +49,7 @@ function ProjectsPage() {
                             projects.map((project, index) => (
                                 <ProjectCard
                                     key={project._id}
+                                    projectId={project._id}
                                     projectName={project.name}
                                     projectImage={project.image_url}
                                     projectDescription={project.project_description}

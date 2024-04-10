@@ -1,10 +1,15 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
+
 import './ProjectCard.css'; // Importando o arquivo CSS
 
-function ProjectCard({ projectName, projectImage, projectDescription }) {
-  
+
+function ProjectCard({projectId, projectName, projectImage, projectDescription }) {
+  const navigate = useNavigate();
+
   const handleCardClick = () => {
-    console.log(`Navegando para o projeto: ${projectName}`);
+    console.log(`Navegando para o projeto: ${projectName}: ${projectId}`);
+    navigate(`/projects/${projectId}`);    
   };
 
   return (
