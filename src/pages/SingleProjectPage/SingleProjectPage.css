@@ -21,9 +21,14 @@
 }
 
 .project-info {
-    text-align: center;
-    margin-top: 20px;
-}
+    position: -webkit-sticky; /* Para suporte no Safari */
+    position: sticky;
+    top: 0;
+    background-color: white; /* Ou qualquer cor de fundo que você preferir */
+    padding: 20px;
+    z-index: 10; /* Garante que a div sobreponha a imagem ao rolar */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Adiciona sombra para destaque */
+  }
 
 .project-title {
     font-size: 2em;
@@ -34,4 +39,16 @@
 .project-description {
     font-size: 1.2em;
     color: #666;
+}
+
+.project-button {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: rgb(9, 0, 128);
+    color: white;
+    font-size: 1em;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
 }

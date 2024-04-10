@@ -51,6 +51,7 @@ function SingleProjectPage() {
                 <div className="project-info">
                     <h3 className="project-title">{project.name}</h3>
                     <p className="project-description">{project.project_description}</p>
+                    <button className="project-button">Ver Projeto</button>
                 </div>
             </div>
         </div>
