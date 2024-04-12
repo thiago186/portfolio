@@ -46,10 +46,10 @@ function SingleProjectPage() {
             <Navbar />
             <div className="single-project-page-container"> 
                 <div className="project-image-container">
-                    <img src={project.image_url} alt={`Projeto: ${project.name}`} className="project-image"/>
+                    <img src={project.image_url} alt={`Projeto: ${project.project_name}`} className="project-image"/>
                 </div>
                 <div className="project-info">
-                    <h3 className="project-title">{project.name}</h3>
+                    <h3 className="project-title">{project.project_name}</h3>
                     <p className="project-description">{project.project_description}</p>
                     <button className="project-button">Ver Projeto</button>
                 </div>

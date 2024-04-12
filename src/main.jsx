@@ -8,6 +8,7 @@ import {
 import "./index.css";
 
 import AboutMePage from "./pages/AboutMePage/AboutMePage";
+import EditProjectPage from "./pages/EditProjectPage/EditProjectPage";
 import Navbar from "./components/Navbar/Navbar";
 import NotFound from "./pages/NotFoundPage/NotFound";
 import ProjectsPage from "./pages/ProjectsPage/ProjectsPage";
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
   {
     path: "/projects/:projectId",
     element: <SingleProjectPage />,
+  },
+  {
+    path: "/projects/edit/:projectId",
+    element: <EditProjectPage />,
   }
 ]);
 
