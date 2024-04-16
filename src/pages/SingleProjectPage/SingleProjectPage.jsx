@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useParams, Navigate } from 'react-router-dom';
+import ReactMarkdown from 'react-markdown';
 
 
 import ProjectCard from '../../components/ProjectCard/ProjectCard';
@@ -50,7 +51,8 @@ function SingleProjectPage() {
                 </div>
                 <div className="project-info">
                     <h3 className="project-title">{project.project_name}</h3>
-                    <p className="project-description">{project.project_description}</p>
+                    <ReactMarkdown className="project-description">{project.project_description}</ReactMarkdown>
+                    <ReactMarkdown>*teste*</ReactMarkdown>
                     <button className="project-button">Ver Projeto</button>
                 </div>
             </div>
