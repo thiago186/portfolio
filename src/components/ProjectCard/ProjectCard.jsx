@@ -1,7 +1,8 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import './ProjectCard.css'; // Importando o arquivo CSS
+
+import './ProjectCard.css';
 
 
 function ProjectCard({projectId, projectName, projectImage, projectDescription }) {
@@ -14,12 +15,12 @@ function ProjectCard({projectId, projectName, projectImage, projectDescription }
 
   return (
     <div className="project-card" onClick={handleCardClick}>
-      <div className="project-image-container">
-        <img src={projectImage} alt={`Projeto: ${projectName}`} className="project-image" />
+      <div className="project-card-image-container">
+        <img src={projectImage} alt={`Projeto: ${projectName}`} className="project-card-image" />
       </div>
-      <div className="project-info">
-        <h3 className="project-title">{projectName}</h3>
-        <p className="project-description">{projectDescription}</p>
+      <div className="project-card-info">
+        <h3 className="project-card-title">{projectName}</h3>
+        <p className="project-card-description">{projectDescription}</p>
       </div>
     </div>
   );

@@ -50,7 +50,7 @@ function ProjectsPage() {
                                 <ProjectCard
                                     key={project._id}
                                     projectId={project._id}
-                                    projectName={project.name}
+                                    projectName={project.project_name}
                                     projectImage={project.image_url}
                                     projectDescription={project.project_description}
                                 />

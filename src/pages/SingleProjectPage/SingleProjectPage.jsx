@@ -44,20 +44,20 @@ function SingleProjectPage() {
     if (Object.keys(project).length > 0) {
     return(
         <div>
-            <Navbar />
-            <div className="single-project-page-container"> 
-                <div className="project-image-container">
-                    <img src={project.image_url} alt={`Projeto: ${project.project_name}`} className="project-image"/>
-                </div>
-                <div className="project-info">
-                    <h3 className="project-title">{project.project_name}</h3>
-                    <ReactMarkdown className="project-description">{project.project_description}</ReactMarkdown>
-                    <ReactMarkdown>*teste*</ReactMarkdown>
-                    <button className="project-button">Ver Projeto</button>
-                </div>
+        <Navbar />
+        <div className="single-project-page-container">
+          <div className="project-image-container">
+            <img src={project.image_url} alt={`Projeto: ${project.project_name}`} className="project-image"/>
+          </div>
+          <div className="project-info">
+            <h3 className="project-title">{project.project_name}</h3>
+            <ReactMarkdown className="project-description">{project.project_markdown_page}</ReactMarkdown>
+            <div className="project-button-container">
+                <button className="project-button">Ver Projeto</button>
             </div>
+          </div>
         </div>
-    
+      </div>      
     );
     } 
     else {
